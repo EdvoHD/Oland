@@ -98,10 +98,55 @@ main {
           text-align: center;
           /* ändra? text ska inte vara centrerad för det försämrar UX */ }
 
-
 header {
   width: 100%;
-  position: relative; }
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%); }
+  header .header-wrapper {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    color: #fff; }
+    header .header-wrapper .header-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50vh;
+      overflow: hidden; }
+      header .header-wrapper .header-video video {
+        min-width: 100%;
+        min-height: auto; }
+    header .header-wrapper .header-hero {
+      z-index: 2;
+      clip-path: polygon(0% 0% 10% 0%); }
+      header .header-wrapper .header-hero h1 {
+        font-size: 40px;
+        margin-bottom: 1rem;
+        font-family: 'poppins'; }
+      header .header-wrapper .header-hero p {
+        font-size: 1.2rem;
+        display: block;
+        padding-bottom: 0.5rem;
+        font-family: 'poppins';
+        margin-right: 20%;
+        margin-left: 20%; }
+    header .header-wrapper .header-overlay {
+      height: 50vh;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #225470;
+      z-index: 1;
+      opacity: 0.6; }
+    header .header-wrapper .header-hero {
+      margin: auto;
+      text-align: center; }
+
+@media (max-width: 830px) {
+  video {
+    min-width: 90vh; } }
 
 footer {
   margin: 0%;
